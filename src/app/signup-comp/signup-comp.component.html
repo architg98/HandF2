@@ -40,7 +40,7 @@
                   />
                 </div>
                 <p class="login-card-description">Sign-up your account</p>
-                <form #f="ngForm">
+                <form #f="ngForm" (ngSubmit)="onCreate(f.value)">
                   <div class="form-group">
                     <label for="username" class="sr-only">Username</label>
                     <input
@@ -81,7 +81,8 @@
                 <button
                   class="btn btn-block login-btn mb-4"
                   type="submit"
-                  routerLink = ''
+                  (click)="onCreate(f)"
+                  routerLink=""
                 >
                   Create Account
                 </button>

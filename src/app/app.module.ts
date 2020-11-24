@@ -7,10 +7,16 @@ import { LoginCompComponent } from './login-comp/login-comp.component';
 import { SignupCompComponent } from './signup-comp/signup-comp.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, LoginCompComponent, SignupCompComponent, HeaderComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [
+    AppComponent,
+    LoginCompComponent,
+    SignupCompComponent,
+    HeaderComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
