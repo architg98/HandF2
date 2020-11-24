@@ -66,12 +66,15 @@
                     />
                   </div>
                 </form>
+                <!-- (click)="onLogin(f)" [disabled]="!f.valid" commented from button tag -->
+            
                 <button
                   class="btn btn-block login-btn mb-4"
-                  [disabled]="!f.valid"
+                  
                   type="submit"
-                  (click)="onLogin(f)"
-                >
+                  routerLink="profile"
+                  >
+                  
                   Login
                 </button>
                 <a href="#!" class="forgot-password-link">Forgot password?</a>
