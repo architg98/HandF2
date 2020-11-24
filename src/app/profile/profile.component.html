@@ -71,7 +71,7 @@
           <div class="col-lg-7 col-md-10">
             <h1 class="display-2 text-white">Hello {{ fullName }}</h1>
             <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your health</p>
-            <a class="btn btn-info" routerLink="signup">Edit profile</a>
+            <a class="btn btn-info" onclick="alert('Functionality yet to implement')" routerLink="signup">Edit profile</a>
           </div>
         </div>
       </div>
@@ -92,8 +92,9 @@
             </div>
             <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
               <div class="d-flex justify-content-between">
-                <a style="color: white;" class="btn btn-sm btn-info mr-4">Add food</a>
-                <a style="color: white;" class="btn btn-sm btn-default float-right">Add Tasks</a>
+                <a href="food" style="color: white;" class="btn btn-sm btn-info mr-4" >Food</a>
+                <a href="tasks" style="color: white;" class="btn btn-sm btn-default float-right">Tasks</a>
+                <!-- <button routerLink="tasks" class="sampleButton">Tasks</button> -->
               </div>
             </div>
             <div class="card-body pt-0 pt-md-4">
@@ -187,9 +188,10 @@
                     </div>
                   </div>
                 </div>
-                <hr class="my-4">
+                <!-- <hr class="my-4">
                 <!-- Description -->
-                <h6 class="heading-small text-muted mb-4">Tasks</h6>
+                <!-- <h6 class="heading-small text-muted mb-4">Tasks</h6>
+                <input type="text" placeholder="Enter new Task" disabled> --> 
                 <!-- <div class="pl-lg-4">
                   <div class="form-group focused">
                     <label>Tasks</label>
@@ -203,5 +205,6 @@
       </div>
     </div>
   </div>
-
 </body>
+
+

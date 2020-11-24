@@ -8,6 +8,8 @@ import { SignupCompComponent } from './signup-comp/signup-comp.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TasksComponent } from './profile/tasks/tasks.component';
+import { FoodComponent } from './profile/food/food.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginCompComponent,
     SignupCompComponent,
     HeaderComponent,
+    TasksComponent,
+    FoodComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

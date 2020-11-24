@@ -83,6 +83,11 @@ body {
     .login-card-footer-nav a {
       font-size: 14px;
       color: #919aa3; }
+
+      .login-card-footer-text {
+        font-size: 16px;
+        color: #0d2366;
+        margin-bottom: 60px; }
   
   /*# sourceMappingURL=login.css.map */
   
