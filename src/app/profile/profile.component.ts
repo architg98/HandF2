@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core'
 import { NgForm } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
@@ -8,7 +7,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
->>>>>>> ec06025d16e7c19eb4496354b95315be907b0592
 
 export class Profile {
   constructor(
