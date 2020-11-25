@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class TasksComponent implements OnInit {
+
+  fullName = 'Unknown User';
+  age = '0';
+  gender = 'Unknown Gender';
+  weight = 'Unknown Weight';
+  height = 'Unknown Height';
+
   todoText: string = "";
   todoList: any = [];
   isTodoListEmpty = false;
