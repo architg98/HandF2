@@ -66,17 +66,18 @@
                     />
                   </div>
                 </form>
-                <!-- (click)="onLogin(f)" [disabled]="!f.valid" commented from button tag -->
-            
+
                 <button
                   class="btn btn-block login-btn mb-4"
-                  
+                  (click)="onLogin(f)"
+                  [disabled]="!f.valid"
                   type="submit"
-                  routerLink="profile"
-                  >
-                  
+                >
                   Login
                 </button>
+                <div class="alert alert-danger" *ngIf="error">
+                  <p>{{ error }}</p>
+                </div>
                 <a href="#!" class="forgot-password-link">Forgot password?</a>
                 <p class="login-card-footer-text">
                   Don't have an account?
