@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core'
 import { NgForm } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-=======
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { isNgTemplate } from '@angular/compiler';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
->>>>>>> ec06025d16e7c19eb4496354b95315be907b0592
+
 
 export class Profile {
   constructor(
@@ -25,7 +21,7 @@ export class Profile {
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
-  @ViewChild('f') form: NgForm;
+  // @ViewChild('f') form: NgForm;
   constructor(private http: HttpClient) {}
   storeProfile: Profile[];
   profile: Profile = {
@@ -39,12 +35,11 @@ export class ProfileComponent implements OnInit {
     this.postProfiles(this.profile);
     this.getProfiles();
   }
-<<<<<<< HEAD
 
   fullName = 'Virat Kohli';
   username = 'viratkohli';
   emailAddress = 'virat.kohli@bcci.com';
-  age = 32;
+  age = '32';
   gender = 'Male';
   weight = '137';
   height = '1.75';
@@ -57,12 +52,14 @@ export class ProfileComponent implements OnInit {
 
   submitPressed() {
     this.editPressed = false;
-=======
-  fullName = 'Unknown User';
-  age = '0';
-  gender = 'Unknown Gender';
-  weight = 'Unknown Weight';
-  height = 'Unknown Height';
+
+    this.fullName = 'Unknown User';
+    this.age = '0';
+    this.gender = 'Unknown Gender';
+    this.weight = 'Unknown Weight';
+    this.height = 'Unknown Height';
+
+  }
   postProfiles(data) {
     this.http
       .post<Profile[]>('https://calsoftcoding.firebaseio.com/post.json', data)
@@ -78,6 +75,5 @@ export class ProfileComponent implements OnInit {
       .subscribe((Response) => {
         console.log(Response);
       });
->>>>>>> ec06025d16e7c19eb4496354b95315be907b0592
   }
 }
