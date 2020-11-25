@@ -85,6 +85,9 @@
                 >
                   Create Account
                 </button>
+                <div class="alert alert-danger" *ngIf="error">
+                  <p>{{ error }}</p>
+                </div>
                 <a class="login-card-footer-text" routerLink="" href=""
                   >Back to Login</a
                 >
