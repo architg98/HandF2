@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food.component.css']
 })
 export class FoodComponent implements OnInit {
-  
+
+   fullName = 'Unknown User';
+  age = '0';
+  gender = 'Unknown Gender';
+  weight = 'Unknown Weight';
+  height = 'Unknown Height';
+
   todoText: string = "";
   todoList: any = [];
   isTodoListEmpty = false;
