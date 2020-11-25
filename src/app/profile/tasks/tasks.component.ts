@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 
 export class TasksComponent implements OnInit {
 
-  fullName = 'Unknown User';
-  age = '0';
-  gender = 'Unknown Gender';
-  weight = 'Unknown Weight';
-  height = 'Unknown Height';
+  fullName = 'Virat Kohli';
+  username = 'viratkohli';
+  emailAddress = 'virat.kohli@bcci.com';
+  age = '32';
+  gender = 'Male';
+  weight = '137';
+  height = '1.75';
 
   todoText: string = "";
   todoList: any = [];
