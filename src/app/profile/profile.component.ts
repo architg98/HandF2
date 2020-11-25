@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -12,10 +15,21 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  fullName = 'Unknown User';
-  age = '0';
-  gender = 'Unknown Gender';
-  weight = 'Unknown Weight';
-  height = 'Unknown Height';
+  fullName = 'Virat Kohli';
+  username = 'viratkohli';
+  emailAddress = 'virat.kohli@bcci.com';
+  age = 32;
+  gender = 'Male';
+  weight = '137';
+  height = '1.75';
+  editPressed = false;
 
+  funEditPressed() {
+    this.editPressed = true;
+    console.log(this.editPressed);
+  }
+
+  submitPressed() {
+    this.editPressed = false;
+  }
 }

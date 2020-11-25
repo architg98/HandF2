@@ -24,7 +24,7 @@
             <a class="nav-link pr-0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="https://pbs.twimg.com/profile_images/740272510420258817/sd2e6kJy_400x400.jpg">
+                  <img alt="Image placeholder" src="https://www.searchpng.com/wp-content/uploads/2019/03/Virat-Kohli-HD-PNG-Image.png">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
                   <span class="mb-0 text-sm  font-weight-bold">{{fullName}}</span>
@@ -71,7 +71,7 @@
           <div class="col-lg-7 col-md-10">
             <h1 class="display-2 text-white">Hello {{ fullName }}</h1>
             <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your health</p>
-            <a class="btn btn-info" onclick="alert('Functionality yet to implement')" routerLink="signup">Edit profile</a>
+            <a class="btn btn-info" (click)="funEditPressed()" routerLink="signup">Edit profile</a>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@
               <div class="col-lg-3 order-lg-2">
                 <div class="card-profile-image">
                   <a>
-                    <img src="https://pbs.twimg.com/profile_images/740272510420258817/sd2e6kJy_400x400.jpg" class="rounded-circle">
+                    <img src="https://www.searchpng.com/wp-content/uploads/2019/03/Virat-Kohli-HD-PNG-Image.png" class="rounded-circle">
                   </a>
                 </div>
               </div>
@@ -144,17 +144,19 @@
                     <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-username">Username</label>
-                        <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Enter Username" value="">
+                        <input type="text" disabled id="input-username" class="form-control form-control-alternative" placeholder="Enter Username" value="{{username}}">
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="Enter email address">
+                        <input type="email" disabled id="input-email" class="form-control form-control-alternative" placeholder="Enter email address" value="{{emailAddress}}">
                       </div>
                     </div>
                   </div>
                 </div>
+              </form>
+              <form>
                 <hr class="my-4">
                 <!-- Address -->
                 <h6 class="heading-small text-muted mb-4">Health information</h6>
@@ -163,7 +165,7 @@
                     <div class="col-md-12">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-address">Age</label>
-                        <input id="input-address" class="form-control form-control-alternative" placeholder="Enter Age" value="" type="text">
+                        <input id="input-address" [disabled]="!editPressed" class="form-control form-control-alternative" placeholder="Enter Age" value="{{age}}" type="text">
                       </div>
                     </div>
                   </div>
@@ -171,21 +173,22 @@
                     <div class="col-lg-4">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-city">Gender</label>
-                        <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="Enter Gender" value="">
+                        <input type="text" [disabled]="!editPressed" id="input-city" class="form-control form-control-alternative" placeholder="Enter Gender" value="{{gender}}">
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-country">Weight (in lbs.)</label>
-                        <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Enter weight (in lbs.)" value="">
+                        <input type="text" [disabled]="!editPressed" id="input-country" class="form-control form-control-alternative" placeholder="Enter weight (in lbs.)" value="{{weight}}">
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group">
                         <label class="form-control-label" for="input-country">Height (in m)</label>
-                        <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Enter Height (in m)">
+                        <input type="text" name="heightField" [disabled]="!editPressed" id="input-postal-code" class="form-control form-control-alternative" placeholder="Enter Height (in m)" value="{{height}}">
                       </div>
                     </div>
+                    <button type="submit" class="btn btn-info" [disabled]="!editPressed" (click)="submitPressed();">Submit</button>
                   </div>
                 </div>
                 <!-- <hr class="my-4">
