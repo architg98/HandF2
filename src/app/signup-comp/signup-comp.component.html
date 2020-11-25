@@ -49,7 +49,6 @@
                       class="form-control"
                       placeholder="Username"
                       ngModel
-                      email
                       required
                     />
                   </div>
@@ -82,11 +81,13 @@
                   class="btn btn-block login-btn mb-4"
                   type="submit"
                   (click)="onCreate(f)"
-                  routerLink=""
+                  [disabled]="!f.valid"
                 >
                   Create Account
                 </button>
-                <a class="login-card-footer-text" href="">Back to Login</a>
+                <a class="login-card-footer-text" routerLink="" href=""
+                  >Back to Login</a
+                >
               </div>
             </div>
           </div>
