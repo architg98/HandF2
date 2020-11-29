@@ -1,6 +1,7 @@
-![Login Page Screenshot](https://github.com/architg98calsoft/Health-and-Fitness/blob/master/Screenshots/Login%20Page.png)
-![Submit Page Screenshot](https://github.com/architg98calsoft/Health-and-Fitness/blob/master/Screenshots/Submit%20Page.png)
-![Profile Page 1](https://github.com/architg98calsoft/Health-and-Fitness/blob/master/Screenshots/Profile%20page%201.png)
-![Profile Page 2](https://github.com/architg98calsoft/Health-and-Fitness/blob/master/Screenshots/Profile%20page%202.png)
-![Tasks Page](https://github.com/architg98calsoft/Health-and-Fitness/blob/master/Screenshots/Tasks%20Page.png)
-![Food Page](https://github.com/architg98calsoft/Health-and-Fitness/blob/master/Screenshots/Food%20page.png)
+
+
+
+
+
+
+
